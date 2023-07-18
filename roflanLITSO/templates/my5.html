@@ -1,0 +1,29 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href= "{% static 'style/grid.css'%}" type="text/css">
+</head>
+<body>
+        <div class="glav">
+            <a href="{% url 'home1' %}"><button class="gl"><p class="gl1">Главная</p></button></a>
+            </div>
+            <h1 class="look">Одежда</h1>
+    </div>
+    <div class="txt4">
+        Как и у любой субкультуры, у хип-хопа есть свой стиль одежды,
+         который выделяет его на фоне других субкультур. В большинстве такой 
+         стиль используют молодежь в возврасте от 12 до 24 лет. В частности подростки 14-18лет. 
+         Этот стиль выражается своей дерзостью и красочностью, да и впринципе при виде такой одежды 
+         создается ассоциация, связанная с хип-хопом.
+    </div>
+    {% for look in text %}
+    {{look.types}}
+    {% endfor %}
+    <img class="lookimg" src="{% static 'C:\Users\railw\OneDrive\Рабочий стол\мпт грид\хх4.jpg'%}" alt="">
+    <img class="lookimg1" src="{% static 'C:\Users\railw\OneDrive\Рабочий стол\мпт грид\xx9.jpg'%}" alt="">
+</body>
+</html>

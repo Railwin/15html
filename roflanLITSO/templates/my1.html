@@ -1,0 +1,75 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=google">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href= "{% static 'style/grid.css'%}" type="text/css">
+</head>
+<body>
+    <a href="{% url 'home' %}"><button class="gl"><p class="gl1">Выйти</p></button></a> 
+    <div class="block1">
+        <div class="vklad">
+            <a href="my2.html">
+                <button class="knop1">
+            <p class="sty_style1">
+                <b>Информация о культуре</b>
+            </p>
+        </button>
+        </a>
+        </div>
+        <div class="vklad1">
+            <a href="my3.html">
+                <button class="knop1">
+                <p class="sty_style2">
+                  <b>История хип-хопа</b>
+                </p>
+                </button>
+            </a>
+        </div>
+        <div class="vklad2">
+             <a href="my4.html">
+                <button class="knop">
+            <p class="sty_style3">
+                <b>Хип-хоп как жанр</b>
+            </p>
+                </button>
+             </a>
+        </div>
+        <div class="vklad3">
+            <a href="my5.html">
+                <button class="knop">
+            <p class="sty_style4">
+                <b>Стиль одежды</b>
+            </p>
+                </button>
+            </a>
+        </div>
+    </div>
+    <div class="block2">
+        <p class="anim">
+            Hip Hop Changes
+            <span class="span1">
+               SWAG
+            </span>
+            &mdash; It's not just culture &mdash;
+          </p>
+          {% for Person in text %}
+          {{Person.name}}
+          {{Person.lastname}}
+          {% endfor %}
+    </div>
+    <div class="eff">
+    <span>R</span><span>A</span><span>P</span>
+    </div>
+    <div class="main">
+        <span class="span1">&mdash; Хип-хоп или хип-хоп-музыка, также известная как рэп-музыка и ранее известная как диско-рэп — музыкальный жанр популярной музыки, развитый в США афроамериканцами, латиноамериканцами и американцами стран Карибского бассейна, живущими в бедных районах Бронкса в Нью-Йорке в 1970-х годах. &mdash;</span>
+    </div>
+    <div>
+        <form action="https://ru.wikipedia.org/wiki/%D0%A5%D0%B8%D0%BF-%D1%85%D0%BE%D0%BF">
+        <button class="down">ВИКИ</button>
+        </form>
+    </div>
+</body>
+</html>

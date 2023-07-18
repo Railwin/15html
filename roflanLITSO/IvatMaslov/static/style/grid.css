@@ -1,0 +1,366 @@
+body{
+  background-image: url("хх7.jpg");
+    background-size: 100%;
+    overflow: hidden;
+  text-align: center;
+  backface-visibility: hidden;
+  margin: 0;
+}
+.block1{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    height: 20%;
+}
+span {
+    display: inline-block;
+    text-shadow: 0 0 0 whitesmoke;
+    animation: smoky 10s 2s both;
+    size: 120%;
+    color: transparent;
+    font: 5vw/100vh "Finger Paint";
+  }
+  span:nth-child(even){
+    animation-name: smoky-mirror;
+  }
+  
+  @keyframes smoky {
+    60% {
+      text-shadow: 0 0 40px whitesmoke;
+    }
+    to {
+      transform:
+        translate3d(15rem,-8rem,0)
+        rotate(-40deg)
+        skewX(70deg)
+        scale(1.5);
+      text-shadow: 0 0 40px whitesmoke;
+      opacity: 0;
+    }
+  }
+  
+  @keyframes smoky-mirror {
+    60% {
+      text-shadow: 0 0 40px whitesmoke; }
+    to {
+      transform:
+        translate3d(18rem,-8rem,0)
+        rotate(-40deg) 
+        skewX(-70deg)
+        scale(2);
+       text-shadow: 0 0 20px whitesmoke;
+      opacity: 0;
+    }
+  }
+  
+  @for $item from 1 through 3 {
+    span:nth-of-type(#{$item}){ 
+      animation-delay: #{(4 + ($item/3))}s; 
+    }
+  } 
+  .vklad{
+    display: flex;
+    justify-content: center;
+    border: 3px solid darkred;
+    background-color: darkred;
+    height: 45%;
+    width: 2%;
+    place-self: center;
+    grid-column-start: 1;
+    width: 200%;
+    
+  }
+  .vklad1{
+    display: flex;
+    justify-content: center;
+    border: 3px solid darkred;
+    background-color: darkred;
+    width: 105%;
+    height: 45%;
+    place-self: center;
+    grid-column-start: 2;
+  }
+  .vklad2{
+    display: flex;
+    justify-content: center;
+    border: 3px solid dodgerblue;
+    background-color: dodgerblue;
+    height: 45%;
+    width: 93.5%;
+    place-self: center;
+    grid-column-start: 3;
+  }
+  .vklad3{
+    display: flex;
+    justify-content: center;
+    border: 3px solid dodgerblue;
+    background-color: dodgerblue;
+    height: 45%;
+    width: 105%;
+    place-self: center;
+    grid-column-start: 4;
+  }
+  .block2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .anim{
+    text-transform: uppercase;
+	letter-spacing: .5em;
+	display: inline-block;
+	border: 4px double rgba(255,255,255,.25);
+	border-width: 4px 0;
+	padding: 1.5em 0em;
+	width: 40em;
+	margin: 0 0 0 -20em;
+  grid-column-start: 3;
+  color:lime;
+  font-size: 12px;
+
+  }
+  .span1{
+    font: 700 4em/1 "Oswald", sans-serif;
+  	letter-spacing: 0;
+  	padding: .25em 0 .325em;
+	  display: block;
+	  margin: 0 auto;
+  	text-shadow: 0 0 80px rgba(255,255,255,.5);
+    background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
+	  -webkit-background-clip: text;
+	  background-clip: text;
+    -webkit-text-fill-color: transparent;
+	  -webkit-animation: aitf 80s linear infinite;
+    -webkit-transform: translate3d(0,0,0);
+	  -webkit-backface-visibility: hidden;
+
+  }
+  @-webkit-keyframes aitf {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+  }
+  @font-face{
+    font-family: "Brush Script MT";
+    src: url("brushscriptmtrusbyme_italic.otf") format(truetype);
+    font-style: normal;
+    font-weight: normal;
+  }
+  .sty_style1{
+    font-family: "Brush Script MT", cursive;
+     font-size: 21px; font-style: normal; 
+      line-height: 20px;
+  }
+  .sty_style2{
+    font-family: "Brush Script MT", cursive;
+     font-size: 21px; font-style: normal; 
+      line-height: 20px;
+  }
+  .sty_style3{
+    font-family: "Brush Script MT", cursive;
+     font-size: 21px; font-style: normal; 
+      line-height: 20px;
+  }
+  .sty_style4{
+    font-family: "Brush Script MT", cursive;
+     font-size: 21px; font-style: normal; 
+      line-height: 20px;
+  }
+  .main{
+    font-family: "Brush Script MT", cursive;
+    background-color:black;
+    font-size: 8px;
+    color: lime;
+    border: 5px solid white;
+  }
+  .eff{
+    height: 10%;
+  }
+  .down{
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+      font-family: "Brush Script MT", cursive;
+      transition: all 0.5s;
+      cursor: pointer;
+      height: 20px;
+      text-align: center;
+  }
+ .info1{
+  font-family:'Courier New', Courier, monospace;
+  font-size: 28px;
+  text-shadow: 3px 3px 5px #ffffff;
+ }
+ .txt1{
+  font-family: "Brush Script MT", cursive;
+  font-size: 5px;
+  background-color: black;
+  border: 3px solid white;
+ }
+ .img1{ 
+  width: fit-content;
+  height: 70%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(5, 20%);
+ }
+ .xx1{
+
+  grid-column-start: 1;
+  grid-row-start: 2;
+  width: 100%;
+  border: 3px solid white;
+  height: 250%;
+ }
+ .text1{
+  grid-column-start: 3;
+  grid-row-start: 2;
+  font-size: 22px;
+  font-family: "Brush Script MT", cursive;
+  color:brown;
+  height:fit-content;
+  background-color: black;
+  border: 3px solid white;
+  width: 280%;
+ }
+ .xx2{
+  grid-column-start: 7;
+  grid-row-start: 2;
+  border: 3px solid white;
+  width: 98%;
+  height: 250%;
+ }
+ .knop1{
+  background-color: dodgerblue;
+ }
+ .knop{
+  background-color: darkred;
+ }
+ .gl{
+  position: relative;
+  color:green;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: rgba(17, 68, 222, 0.5) 1px 1px, rgba(100,100,100,.3) 3px 7px 3px;
+  user-select: none;
+  padding: 1em 2em;
+  outline: none;
+  border-radius: 3px / 100%;
+  background-image:
+   linear-gradient(45deg, rgba(255,255,255,.0) 30%, rgba(207, 28, 28, 0.8), rgba(255,255,255,.0) 70%),
+   linear-gradient(to right, rgb(195, 41, 41), rgba(255,255,255,0) 20%, rgba(255,255,255,0) 90%, rgba(255,255,255,.3)),
+   linear-gradient(to right, rgb(152, 75, 50), rgba(212, 13, 13, 0.9) 45%, rgba(26, 24, 24, 0.5)),
+   linear-gradient(to right, rgb(187, 15, 15), rgba(249, 243, 243, 0.9) 45%, rgba(125,125,125,.5)),
+   linear-gradient(to right, rgba(223,190,170,1), rgba(243, 231, 231, 0.9) 45%, rgba(223,190,170,.5)),
+   linear-gradient(to right, rgba(223,190,170,1), rgba(203, 19, 19, 0.9) 45%, rgba(223,190,170,.5));
+  background-repeat: no-repeat;
+  background-size: 200% 100%, auto, 100% 2px, 100% 2px, 100% 1px, 100% 1px;
+  background-position: 200% 0, 0 0, 0 0, 0 100%, 0 4px, 0 calc(100% - 4px);
+  box-shadow: rgba(231, 21, 21, 0.5) 3px 10px 10px -10px;
+}
+.gl:hover{
+  transition: .5s linear;
+  background-position: -200% 0, 0 0, 0 0, 0 100%, 0 4px, 0 calc(100% - 4px);
+}
+ .gl1{
+  font-family: 'Courier New', Courier, monospace;
+ }
+ .glav{
+  display: flex;
+  justify-content: flex-start;
+  height: 1%;
+ }
+ .hhh{
+  display: flex;
+  justify-content: center;
+ }
+ .hist{
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  align-items: flex-end;
+  height: 15%;
+  width: 40%;
+  justify-content:center;
+  font-size: 40px;
+  text-shadow: 3px 3px 5px white;
+ }
+ .txt2{
+  font-family: "Brush Script MT", cursive;
+  font-size: 32px;
+  background-color: #ffffff;
+ }
+ .hist1{
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  align-items: center;
+  height: 15%;
+  width: 45%;
+  justify-content:center;
+  font-size: 40px;
+  text-shadow: 3px 3px 5px white;
+ }
+ .txt3{
+  font-family: "Brush Script MT", cursive;
+  font-size: 32px;
+  background-color: #ffffff;
+ }
+ .mel{
+  width: 40%;
+  height: 50%;
+ }
+ .bod{
+  height: 100%;
+  overflow: scroll;
+ }
+ .hist2{
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  font-size: 40px;
+  text-shadow: 3px 3px 5px white;
+ }
+ .text2{
+  font-size: 6px;
+  background-color: black;
+ }
+ .text3{
+  font-size: 6px;
+  background-color: black;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  height: fit-content;
+ }
+ .drake1{
+  justify-content: flex-end;
+ }
+ .MELON{
+  height: 50%;
+ }
+ .look{
+  color: greenyellow;
+  font-size: 60px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  display: flex;
+  height: 15%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20%;
+  text-shadow: 3px 3px 5px white;
+ }
+ .txt4{
+  font-family: "Brush Script MT", cursive;
+  font-size: 38px;
+  color:aqua;
+  background-color: black;
+ }
+ .lookimg{
+  width: 30%;
+  height: 40%;
+ }
+ .lookimg1{
+  width: 30%;
+  height: 40%;
+ }
+ .popular{
+  font-family: "Brush Script MT", cursive;
+  color: aqua;
+ }
